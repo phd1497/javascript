@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Log in</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Registration</h1>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full name" id="fullnm">
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" placeholder="Username" id="usernm">
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" placeholder="Email" id="input-email">
+                    <i class='bx bxs-envelope'></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" placeholder="Phone">
+                    <i class='bx bxs-phone'></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" placeholder="Password" id="pw">
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" placeholder="Confirm Password">
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox"> i agree with all informations
+            </label>
+
+            <button type="button" class="btn" onclick="SaveData()">Register</button>
+            <button class="btn"><a href="test4.html" class="bth" style="text-decoration: none; color: black;">Back to Home</a></button>
+
+        </form>
+    </div>
+
+    <div class="data-save">
+         <div class="title-cus">
+            <tr>
+                <td><span>Name</span></td>
+                <td><span>User</span></td>
+                <td><span>Email</span></td>
+                <td><span>Password</span></td>
+            </tr>
+        </div>
+        
+        <div class="data-cus">
+            <div class="coldt fullname" id="fullname_cus"></div>
+            <div class="coldt usernm" id="user_cus"></div>
+            <div class="coldt email" id="email_cus"></div>
+            <div class="coldt password" id="pw_cus"></div>
+        </div>
+    </div>
+
+
+    <div class="item-sale">
+        <div class="pic-item">
+            <div class="pic">
+                <img src="pic1.png" alt="">
+                <h3 class="nm-pr">Monitor screen</h3>
+                    <div class="five-start">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"> <a class="rating" href="#">45,670</a> Reviews</span>
+                    </div>
+                    <span class="unit-price">$</span>
+                    <span class="main-price" id="price-og">39.00</span>
+            </div>
+    
+            <div class="pic">
+                <img src="pic1.png" alt="">
+                <h3 class="nm-pr">Monitor screen</h3>
+                    <div class="five-start">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"> <a class="rating" href="#">45,670</a> Reviews</span>
+                    </div>
+                    <span class="unit-price">$</span>
+                    <span class="main-price" id="price-og">40.00</span>
+            </div>
+        </div>
+    
+        <div class="discount">
+            <button class="animated-button" onclick="Discountfn()">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+            <span class="text">Discount</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+            </button>
+
+            <div class="d_ipt_discount">
+                <input class="" type="number" id="inp_dsc">
+            </div>
+
+            <button class="animated-button" onclick="clearDiscount()">
+                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    ></path>
+                </svg>
+                <span class="text">Clear</span>
+                <span class="circle"></span>
+                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    ></path>
+                </svg>
+                </button>
+        </div>
+    </div>
+</body>
+<script src="login.js"></script>
+</html>
